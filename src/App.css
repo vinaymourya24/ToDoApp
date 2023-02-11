@@ -1,38 +1,78 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Oxygen&display=swap');
+*{
+  margin:0%;
+  padding:0%;
+}
+html{
+  background-color: rgb(201, 237, 240);
+  height: 100vh;
+}
+.mainContainer{
+  background-color: rgb(201, 237, 240);
+  height: 100vh;
+}
+header{
+  width: 100vw;
+  background-color: rgb(6, 180, 199);
+  font-family: 'Gentium Book Plus', serif;
+  padding: 20px 20px;
+  /* border:2px solid black; */
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.centerComponent{
+  margin-top: 3vh;
+  margin-left: 380px;
+  margin-right: 380px;
+  width: 800px;
+  height: 80vh;
+  border: 2px solid black;
+  overflow: hidden;
+  z-index: -11000;
+  overflow-y: scroll;
+  box-shadow: 25px 30px rgb(6, 180, 199);;
+}
+input{
+  font-family: 'Oxygen', sans-serif;
+  font-size: large;
+  border-radius: 8px;
+  font-weight: bold;
+  padding: 6px;
+  width: 80%;
+  margin: 8px 8px;
+  height: 30px;
+}
+span{
+  background-color: rgb(98, 176, 228);
+  border:2px solid black;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 20px 20px;
+  padding:4px;
+  padding-left:12px;
+  padding-right:12px;
+  border-radius: 24%;
+}
+span:hover{
+  background-color: rgb(96, 212, 168);
+  transition:ease-in-out;
+  cursor: pointer;
+}
+.ToDo{
+  font-family: 'Gentium Book Plus', serif;
+  font-size: 2em;
+  padding: 4px 4px;
+  margin-left: 8px;
+  background-color: rgb(6, 180, 199);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ol li{
+  font-size: 30px;
+  padding: 5px 5px;
+  padding-left: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li{
+  background-color: rgb(171, 208, 212);
+  margin: 5px 5px;
+  border-radius: 5px;
 }

@@ -1,25 +1,43 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Todolist from './components/TodoList';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () =>
+{
+   const [initialData,updatedata] = useState("");
+   const [arr,updatearr] = useState([]);
+   
+   const Update = (event) =>{
+      updatedata(event.target.value);
+   }
+ 
+   const AddTask = () =>{
+      updatearr((oldarr)=>{
+          return ([...oldarr,initialData]);
+      })
+      updatedata("");
+   }
+
+    return (
+     <>
+       <div className="mainContainer">
+          <header>
+          <h1>What are Your Plans to Do?</h1>
+          </header>
+          <div className="centerComponent">
+              <input type="text" placeholder="add a task you want to do.."  value={initialData} onChange={Update}></input>
+              <span onClick={AddTask}>+</span>
+              <div className="ToDo">To Do Tasks</div>
+              <hr></hr>
+              <ol>
+                {arr.map((task)=>{
+                    return <Todolist val={task}/>;
+                })}
+              </ol>
+          </div>
+       </div>
+     </>
+    );
 }
 
 export default App;
