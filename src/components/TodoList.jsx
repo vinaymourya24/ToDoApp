@@ -2,7 +2,7 @@ import React from 'react'
 
 const Todolist = (props) =>{
   return (
-    <li>{props.val}</li>
+    <li>{props.val}<div className="delete">-</div></li>
   );
 };
 

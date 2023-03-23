@@ -12,32 +12,49 @@ html{
   height: 100vh;
 }
 header{
-  width: 100vw;
+  width: 100%;
   background-color: rgb(6, 180, 199);
   font-family: 'Gentium Book Plus', serif;
-  padding: 20px 20px;
+  padding: 1rem;
+   display: flex;
+   flex-wrap: wrap;
   /* border:2px solid black; */
+}
+.headLine{
+  display: inline-block;
+  /* border: 1px solid black; */
+  font-size: 2rem;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
   text-align: center;
+  margin: auto;
+}
+.cBody{
+  margin-top: 1.2rem;
+  width: 100%;
+  height: 78vh;
+  /* border: 1px solid black; */
+  height: 80vh;
 }
 .centerComponent{
-  margin-top: 3vh;
-  margin-left: 380px;
-  margin-right: 380px;
-  width: 800px;
-  height: 80vh;
+  width: 60%;
+  margin: auto;
+  height: 95%;
   border: 2px solid black;
   overflow: hidden;
   z-index: -11000;
   overflow-y: scroll;
-  box-shadow: 25px 30px rgb(6, 180, 199);;
+  box-shadow: 1.4rem 1.4rem 0.8rem rgb(6, 180, 199);
 }
+
 input{
   font-family: 'Oxygen', sans-serif;
   font-size: large;
   border-radius: 8px;
   font-weight: bold;
   padding: 6px;
-  width: 80%;
+  width: 70%;
   margin: 8px 8px;
   height: 30px;
 }
@@ -45,11 +62,11 @@ span{
   background-color: rgb(98, 176, 228);
   border:2px solid black;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 2rem;
   margin: 20px 20px;
-  padding:4px;
-  padding-left:12px;
-  padding-right:12px;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   border-radius: 24%;
 }
 span:hover{
@@ -75,4 +92,42 @@ li{
   background-color: rgb(171, 208, 212);
   margin: 5px 5px;
   border-radius: 5px;
+}
+.delete{
+   display: inline-block;
+   padding: 0.2rem;
+   padding-left: 1rem;
+   padding-right: 1rem;
+   border-radius: 1rem;
+   background-color: rgb(98, 176, 228);
+   border: 1px solid black;
+   float: right;
+}
+.delete:hover{
+  background-color: rgb(196, 65, 65);
+}
+@media(max-width:768px)
+{
+  .centerComponent{
+    width: 100%;
+  }
+}
+
+@media(max-width:480px)
+{
+   input{
+      width: 63%;
+   }
+   span{
+      font-size: 1.1rem; 
+      padding-left: 0.6rem;
+      padding-right: 0.6rem;
+   }
+}
+
+@media(max-width:280px)
+{
+   span{
+      padding: 8px;
+   }
 }
