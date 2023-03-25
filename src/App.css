@@ -71,7 +71,7 @@ span{
 }
 span:hover{
   background-color: rgb(96, 212, 168);
-  transition:ease-in-out;
+  transition: 0.6s ease-in-out;
   cursor: pointer;
 }
 .ToDo{
@@ -93,18 +93,24 @@ li{
   margin: 5px 5px;
   border-radius: 5px;
 }
+
+li:hover{
+  background-color: rgb(96, 147, 153);
+}
+
 .delete{
    display: inline-block;
    padding: 0.2rem;
    padding-left: 1rem;
    padding-right: 1rem;
    border-radius: 1rem;
-   background-color: rgb(98, 176, 228);
+   background-color: rgb(189, 124, 113);
    border: 1px solid black;
    float: right;
 }
 .delete:hover{
-  background-color: rgb(196, 65, 65);
+  background-color: rgb(190, 83, 83);
+  transition: 0.6s ease-in-out;
 }
 @media(max-width:768px)
 {

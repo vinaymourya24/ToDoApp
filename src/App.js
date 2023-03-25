@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-import Todolist from './components/TodoList';
 
 const App = () => {
   const [initialData, updatedata] = useState("");
@@ -12,9 +11,22 @@ const App = () => {
 
   const AddTask = () => {
     updatearr((oldarr) => {
+      if(initialData==="")
+      {
+        alert("Please Write Something To Add");
+        return ([...oldarr]);
+      }
       return ([...oldarr, initialData]);
     })
     updatedata("");
+  }
+
+  const deleteItem = (id) =>{
+     const updatedata = arr.filter((element,ind)=>{
+         return (ind !== id);
+     }); 
+
+     updatearr(updatedata);
   }
 
   return (
@@ -30,8 +42,8 @@ const App = () => {
             <div className="ToDo">To Do Tasks</div>
             <hr></hr>
             <ol>
-              {arr.map((task) => {
-                return <Todolist val={task} />;
+              {arr.map((task,ind) => {
+                 return <li>{task}<div className="delete" onClick={()=>{deleteItem(ind)}}>-</div></li>;
               })}
             </ol>
           </div>
